@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SB Admin</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-light bg-light stick">
+    <span id="slide-menu">
+      <img src="/img/list.svg" alt="list" style="width: 1.5em; position: relative; top: -3px;" onclick="slide()"
+        ondblclick="clos()">Assignment
+    </span>
+    <!-- onmouseover="slide()"  onmouseout="close()" -->
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#"><img src="/img/bell.svg" alt="notificatin"></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><img src="/img/envelope.svg" alt="messages"></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><img src="/img/person.svg" alt="icon"></a>
+      </li>
+    </ul>
+  </nav>
+  <div id="slider" class="nav-slide bg-light">
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link" href="./index.html" target="_self"><img src="/img/activity.svg" alt="act">&ensp;Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./table.html" target="_self"><img src="/img/grid.svg" alt="table">&ensp;Table</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active link-nav" href="./wiz.htm" target="_self"><img src="/img/globe-whihte.svg" alt="Wizard">&ensp;Wizard</a>
+      </li>
+    </ul>
+  </div>
+
+  <section id="content">
+    <div class="relative"></div>
+    <div id="wiz">
+        <div class="wiz">
+          <h1 class="h2 text-white mx-5"><img src="/img/arrow-white.svg" alt="act">&ensp;Wizard</h1>
+          <p class="text-white mx-5">Wizard examples for step-by-step form submission content to use as a part of an
+            application</p>
+        </div>
+        <div class="card wizard">
+          <div class="card-header">
+            <nav class="nav nav-pills nav-justified" id="progressBar">
+              <a class="nav-link active" aria-current="page" href="#inputInfo" id="account">
+                <div class="d-flex g-1">
+                  <div>
+                    <div class="num" id="num1"><strong>1</strong></div>
+                  </div>
+                  <div class="det" id="setup">
+                    <h3 class="text-white" id="head1">Account Setup</h3>
+                    <p class="text-light" id="para1">Basic details and information</p>
+                  </div>
+                </div>
+              </a>
+              <a class="nav-link" href="#review" id="confirm">
+                <div class="d-flex">
+                  <div>
+                    <div class="num num-after" id="num2"><strong>2</strong></div>
+                  </div>
+                  <div class="det" id="revLink">
+                    <h3 class="text-primary" id="head2">Review & Submit</h3>
+                    <p class="text-dark" id="para2">Review and submit changes</p>
+                  </div>
+                </div>
+              </a>
+            </nav>
+          </div>
+          <div class="card-body text-start mx-5 my-5 space" id="inputInfo">
+            <h4 class="card-title text-primary" id="inpt">Step 1</h4>
+            <h5 class="card-subtitle my-2">Enter your account information</h5>
+  
+            <form class="row g-3 my-3" name="infoForm">
+              <div class="col-12">
+                <label for="inputName" class="form-label text-muted">Username(how your name wil appear to other users on
+                  the site)</label>
+                <input type="text" class="form-control" id="inputName" placeholder="username">
+              </div>
+              <div class="col-md-6">
+                <label for="inputFirstName" class="form-label text-muted">First name</label>
+                <input type="text" class="form-control" id="inputFirstName" placeholder="Valerie">
+              </div>
+              <div class="col-md-6">
+                <label for="inputLastName" class="form-label text-muted">Last name</label>
+                <input type="text" class="form-control" id="inputLastName" placeholder="Luna">
+              </div>
+              <div class="col-md-6">
+                <label for="inputOrgName" class="form-label text-muted">Oragnization name</label>
+                <input type="text" class="form-control" id="inputOrgName" placeholder="Start Bootstrap">
+              </div>
+              <div class="col-md-6">
+                <label for="inputLocation" class="form-label text-muted">Location</label>
+                <input type="text" class="form-control" id="inputLocation" placeholder="San Francisco, CA">
+              </div>
+              <div class="col-12">
+                <label for="inputEmail" class="form-label text-muted">Email address</label>
+                <input type="email" class="form-control" id="inputEmail" placeholder="name@exapmle.com">
+              </div>
+              <div class="col-12 border-top mt-3">
+                <div class="d-flex justify-content-between pt-3">
+                  <div class="form-check prv-btn">
+                    <button type="button" class="btn btn-light disabled">Previous</button>
+                  </div>
+                  <div class="form-check">
+                    <button type="button" class="btn btn-primary active" onclick="nxt()">Next</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+  
+          </div>
+          <div class="card-body text-start m-5 space d-none" id="review">
+            <h4 class="card-title text-primary" id="inpt">Step 2</h4>
+            <h5 class="card-subtitle my-2">Review the following information and submit</h5>
+            <form class="row g-3 my-3" style="width: 390px;">
+              <div class="col-12 d-flex justify-content-between">
+                <label for="userName" class="form-label text-muted">Username:</label>
+                <div id="userName" style="display: inline;" class="text-muted text-start"></div>
+              </div>
+              <div class="col-12 d-flex justify-content-between">
+                <label for="fullName" class="form-label text-muted">Name:</label>
+                <div id="fullName" style="display: inline;" class="text-muted text-start"></div>
+              </div>
+              <div class="col-12 d-flex justify-content-between">
+                <label for="orgName" class="form-label text-muted">Organization Name:</label>
+                <div id="orgName" style="display: inline;" class="text-muted"></div>
+              </div>
+              <div class="col-12 d-flex justify-content-between">
+                <label for="location" class="form-label text-muted">Location:</label>
+                <div id="location" style="display: inline;" class="text-muted"></div>
+              </div>
+              <div class="col-12  d-flex justify-content-between">
+                <label for="email" class="form-label text-muted">Email:</label>
+                <div id="email" style="display: inline;" class="text-muted"></div>
+              </div>
+              
+            </form>
+            <div class="col-12 border-top mt-3">
+              <div class="d-flex justify-content-between pt-3">
+                <div class="form-check">
+                  <button type="button" class="btn btn-light btn-light" onclick="prev()">Previous</button>
+                </div>
+                <div class="form-check">
+                  <button type="submit" class="btn btn-primary active" onclick="">Submit</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+  
+  
+      </div>
+    
+
+    
+
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+  <script>
+    function slide() {
+      document.getElementById('slider').style.width = "250px";
+      document.getElementById('content').style.marginLeft = "250px";
+    }
+    function clos() {
+      document.getElementById('slider').style.width = "0px";
+      document.getElementById('content').style.marginLeft = "0px";
+    }
+
+    function prev(){
+      document.getElementById("inputInfo").style.display="block";
+
+        document.getElementById("review").classList.add('d-none');
+        document.getElementById("confirm").classList.remove('active');
+        document.getElementById("account").classList.add('active');
+
+        document.getElementById("num1").classList.remove('num-after');
+        document.getElementById("num2").classList.add('num-after');
+        document.getElementById("head1").classList.add('text-white');
+        document.getElementById("head1").classList.remove('text-primary');
+        document.getElementById("para1").classList.remove('text-dark');
+        document.getElementById("head2").classList.remove('text-white');
+        document.getElementById("para2").classList.remove('text-white');
+    }
+    function nxt(){
+      var uname=document.getElementById("inputName").value;
+      let fname=document.getElementById("inputFirstName").value;
+      let lname=document.getElementById("inputLastName").value;
+      let oname=document.getElementById("inputOrgName").value;
+      let loc=document.getElementById("inputLocation").value;
+      let email=document.getElementById("inputEmail").value;
+
+      
+      if(!uname || !fname || !lname || !oname || !loc || !email){
+        alert("Every field is required!");
+        return false;
+      }
+        
+      else{
+        document.getElementById("account").classList.remove('active');
+        document.getElementById("num1").classList.add('num-after');
+        document.getElementById("num2").classList.remove('num-after');
+        document.getElementById("head1").classList.remove('text-white');
+        document.getElementById("head1").classList.add('text-primary');
+        document.getElementById("para1").classList.add('text-dark');
+        document.getElementById("head2").classList.add('text-white');
+        document.getElementById("para2").classList.add('text-white');
+        document.getElementById("confirm").classList.add('active');
+        document.getElementById("inputInfo").style.display="none";
+        document.getElementById("review").classList.remove('d-none');
+        document.getElementById("userName").innerText=uname;
+        document.getElementById("fullName").innerText=(fname+" "+lname);
+        document.getElementById("orgName").innerText=oname;
+        document.getElementById("location").innerText=loc;
+        document.getElementById("email").innerText=email;
+      }
+    }
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+.stick{
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index: 1;
+  }
+  .nav-slide{
+    position: relative;
+    top:8%;
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      /* background-color: #111; */
+      opacity: 0.9;
+      overflow-x: hidden;
+      transition: 0.1s;
+  }
+  .relative{
+    height:250px;
+    width:100%;
+    position: fixed;
+    /* top:25vh; */
+    background-image: linear-gradient(to right, blue , #561efc);
+  }
+  .link-nav{
+    margin:0 5px;
+    color:white;
+    background-color: #0d6efd;
+    border-radius: 10px;
+  }
+  .dash{
+    position: relative;
+    top:90px;
+  }
+  .wiz{
+      position: relative;
+      top:100px;
+  }
+  #table{
+    position: relative;
+    top:90px;
+  }
+  .wizard{
+    max-width:60%;
+    margin: auto;
+    top:120px;
+  } 
+  .num{
+      margin: 10px auto;
+      display: inline-block;
+      padding: 10px 20px;
+      background: white;
+      color: #0d6efd;
+      border-radius: 10px;
+  }
+  
+  .num-after{
+    background:#0d6efd;
+    color:white;
+  }
+  .det{
+    text-align: left;
+    margin-left: 10px;
+}

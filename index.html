@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SB Admin</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-light bg-light stick">
+    <span id="slide-menu">
+      <img src="/img/list.svg" alt="list" style="width: 1.5em; position: relative; top: -3px;" onclick="slide()"
+        ondblclick="clos()">Assignment
+    </span>
+    <!-- onmouseover="slide()"  onmouseout="close()" -->
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#"><img src="/img/bell.svg" alt="notificatin"></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><img src="/img/envelope.svg" alt="messages"></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><img src="/img/person.svg" alt="icon"></a>
+      </li>
+    </ul>
+  </nav>
+  <div id="slider" class="nav-slide bg-light">
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link link-nav" href="index.html" target="_self"><img src="/img/activity-white.svg" alt="act">&ensp;Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./table.html" target="_self"><img src="/img/grid.svg" alt="table">&ensp;Table</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./wiz.htm" target="_self"><img src="/img/globe.svg" alt="Wizard">&ensp;Wizard</a>
+      </li>
+    </ul>
+  </div>
+
+  <section id="content">
+    <div class="relative"></div>
+    <div id="dash" class="dash">
+        <div class="d-flex justify-content-between">
+          <div>
+            <h1 class="h2 text-white mx-5"><img src="/img/activity-white.svg" alt="act" style="width: 25px;">&ensp;Dashboard</h1>
+            <p class="text-white mx-5">Example dashboard overview and content summary</p>
+          </div>
+          <div>
+            <input type="date" name="date" id="datePicker" placeholder="Select date range..." class="me-5">
+          </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-4 px-5 py-3">
+          <div class="col">
+            <div class="card">
+              <div class="card-body text-center">
+                <h1 class="card-title h1 text-primary">Welcome to SB Admin Pro!</h1>
+                <p class="card-text lead mb-2 text-muted ">Browser our fully designed UI toolkit! Browse our prebuilt app
+                  pages, components, and utilites, and be sure to look our documentation!</p>
+              </div>
+              <img src="./img/admin.jpg" class="card-img-bottom" alt="admin" style="height: 250px;">
+            </div>
+          </div>
+  
+  
+  
+          <div class="col">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title text-primary d-flex justify-content-between">Recent Activity <img src="./img/threedots.svg" alt="."></h5>
+              </div>
+              <div class="card-body">
+                <p class="card-text"></p>
+              </div>
+            </div>
+          </div>
+  
+  
+          <div class="col">
+            <div class="card ">
+              <div class="card-header">
+                <h5 class="h4 card-title text-primary d-flex justify-content-between">Progress Tracker <img src="./img/threedots.svg" alt="."></h5>
+              </div>
+              <div class="card-body">
+  
+  
+                <div class="d-flex justify-content-between">
+                  <p class="card-text">Serve Migration</p>
+                  <p class="d-inline">20%</p>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="25"
+                    aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+  
+                <div class="d-flex justify-content-between mb-0 mt-2">
+                  <p class="card-text">Sales Tracking</p>
+                  <p class="d-inline">40%</p>
+                </div>
+                <div class="progress m-0">
+                  <div class="progress-bar bg-warning" role="progressbar" style="width: 40%" aria-valuenow="50"
+                    aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+  
+  
+                <div class="d-flex justify-content-between mb-0 mt-2">
+                  <p class="card-text">Customer Database</p>
+                  <p class="d-inline">60%</p>
+                </div>
+                <div class="progress m-0">
+                  <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="75" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+  
+                <div class="d-flex justify-content-between mb-0 mt-2">
+                  <p class="card-text">Payout Details</p>
+                  <p class="d-inline">80%</p>
+                </div>
+                <div class="progress m-0">
+                  <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="75"
+                    aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+  
+                <div class="d-flex justify-content-between mt-3">
+                  <p class="card-text">Account Setup</p>
+                  <p class="d-inline">Complete!</p>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100"
+                    aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+              
+              <a href="#" class="mt-2 card-footer text-dark text-decoration-none d-flex justify-content-between">
+                <p>View Report</p>
+                <img src="./img/chevron-black.svg" alt=">" width="12px"></a>
+            </div>
+          </div>
+  
+        </div>
+        <div class="container-fluid mt-3">
+          <div class="row">
+            <div class="col card mb-3 mx-5 text-white bg-primary">
+              <div class="row g-0">
+                <div class="col-md-8 my-3">
+                  <div class="card-body">
+                    <h5 class="card-title">Earnings (Monthly)</h5>
+                    <p class="card-text fw-bold h4">$40,000</p>
+                  </div>
+                </div>
+                <div class="col-md-4 my-5">
+                  <img src="./img/calendar.svg" class="img-fluid rounded-end" alt="cal" width="40px">
+                </div>
+              </div>
+              <a href="#" class="card-footer text-white text-decoration-none d-flex justify-content-between">
+                <p>View Report</p>
+                <img src="./img/chevron.svg" alt=">" width="12px"></a>
+            </div>
+    
+    
+            <div class="col card mb-3 mx-5 text-white bg-warning" >
+              <div class="row g-0">
+                <div class="col-md-8 my-3">
+                  <div class="card-body">
+                    <h5 class="card-title">Earnings (Annual)</h5>
+                    <p class="card-text fw-bold h4">$215,000</p>
+                  </div>
+                </div>
+                <div class="col-md-4 my-5">
+                  <img src="./img/dolllar.svg" class="img-fluid rounded-end" alt="$" width="40px">
+                </div>
+              </div>
+              <a href="#" class="card-footer text-white text-decoration-none d-flex justify-content-between">
+                <p>View Report</p>
+                <img src="./img/chevron.svg" alt=">" width="12px"></a>
+            </div>
+    
+    
+            <div class="col card mb-3 mx-5  text-white bg-success" >
+              <div class="row">
+                <div class="col-md-8 my-3">
+                  <div class="card-body">
+                    <h5 class="card-title">Task Completion</h5>
+                    <p class="card-text fw-bold h4">24</p>
+                  </div>
+                </div>
+                <div class="col-md-4 my-5">
+                  <img src="./img/check.svg" class="img-fluid rounded-end" alt="check" width="40px">
+                </div>
+              </div>
+              <a href="#" class="card-footer text-white text-decoration-none d-flex justify-content-between">
+                <p>View Task</p>
+                <img src="./img/chevron.svg" alt=">" width="12px"></a>
+            </div>
+    
+            <div class="col card mb-3 mx-5 text-white bg-danger" >
+              <div class="row">
+                <div class="col-md-8 my-3">
+                  <div class="card-body">
+                    <h5 class="card-title h5">Pending Request</h5>
+                    <p class="card-text fw-bold h4">17</p>
+                  </div>
+                </div>
+                <div class="col-md-4 my-5">
+                  <img src="./img/chat.svg" class="img-fluid rounded-end" alt="chat" width="40px">
+                </div>
+              </div>
+              <a href="#" class="card-footer text-white text-decoration-none d-flex justify-content-between">
+                <p>View Report</p>
+                <img src="./img/chevron.svg" alt=">" width="12px"></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    
+
+    
+
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+  <script>
+    function slide() {
+      document.getElementById('slider').style.width = "250px";
+      document.getElementById('content').style.marginLeft = "250px";
+    }
+    function clos() {
+      document.getElementById('slider').style.width = "0px";
+      document.getElementById('content').style.marginLeft = "0px";
+    }
+    function jsredir() {
+  window.location.href = "./wiz.htm";
+}
+  </script>
+</body>
+
+</html>
